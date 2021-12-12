@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/index.css">
+
+</head>
+
+<body>
+
+    <center><h1>Database Operations</h1></center>
+
+    <form class="grid" action="/create" method="POST">
+        <center>
+            {% if data %}
+            <h3 style="color: blue;">User: {{data}}, created!</h3>
+            {% endif %}
+        </center>
+
+        <label for="userName">Enter name for User: </label>
+        <input type="text" name="userName" id="userName">
+
+        <label for="userID">Enter ID for User: </label>
+        <input type="text" name="userID" id="userID">
+
+        <center>
+            <input type="submit" class="file_submit" value="Create Document">
+        </center>
+
+    </form>
+
+    <form class="grid" action="/read" method="POST">
+        <center>
+            {% if data %}
+            <h3 style="color: blue;"">Hello {{data}}, How are you?</h3>
+            {% endif %}
+        </center>
+
+        <label for="userName">Enter name for User: </label>
+        <input type="text" name="userName" id="userName">
+
+        <center>
+            <input type="submit" class="file_submit" value="Read Document(s)">
+        </center>
+
+    </form>
+
+    <form class="grid" action="/update" method="POST">
+        <center>
+            {% if data %}
+            <h3 style="color: blue;"">Hello {{data}}, How are you?</h3>
+            {% endif %}
+        </center>
+
+        <h4>ID for User will be 10. <br>
+        Enter new user name will be newUser. 
+        </h4>
+
+        <center>
+            <input type="submit" class="file_submit" value="Update Document(s)">
+        </center>
+
+    </form>
+
+    <form class="grid" action="/delete" method="POST">
+        <center>
+            {% if data %}
+            <h3 style="color: blue;">User {{data}}, deleted!</h3>
+            {% endif %}
+        </center>
+
+        <label for="userName">Enter name for User: </label>
+        <input type="text" name="userName" id="userName">
+
+        <label for="userID">Enter ID for User: </label>
+        <input type="text" name="userID" id="userID">
+
+        <center>
+            <input type="submit" class="file_submit" value="Delete Document(s)">
+        </center>
+
+    </form>
+
+
+</body>
+
+
+
+
+
+
+</html>
